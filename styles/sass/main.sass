@@ -1,0 +1,782 @@
+@use 'sass:math'
+@use 'sass:color'
+
+.title
+    font-size: 2.3em
+    margin-bottom: 1.325em
+    text-transform: uppercase
+    font-family: 'Montserrat', sans-serif
+    font-weight: 500
+
+.caption
+    text-transform: uppercase
+    font-size: 2em
+    font-weight: 500
+
+.subtitle
+    font-size: 0.8125em
+    text-transform: uppercase
+
+.center
+    text-align: center
+
+.right
+    text-align: right
+
+.white-space
+    white-space: pre-line
+
+@media (max-width: 991.98px)
+    .caption
+        font-size: 1.4em
+    .title
+        font-size: 1.6em
+        line-height: 1.4
+        margin-bottom: 1em
+
+@media (max-width: 575.98px)
+    .subtitle
+        font-size: 0.6875em
+
+@media (max-width: 340px)
+    .title
+        font-size: 1.5em
+    .subtitle
+        font-size: 0.6875em
+
+.icon
+    display: block
+    width: 95px
+    img
+        width: 100%
+        object-fit: cover
+
+.border
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-height: 42px
+    border: 1px solid var(--main-text-color)
+    border-radius: 50px
+    padding: 0px 18px
+    &-white
+        border: 1px solid var(--color-white)
+    svg
+        margin-right: 15px
+
+.big-border-radius, .big-border-radius img
+    border-radius: var(--big-border-radius)
+
+.main-border-radius, .main-border-radius img
+    border-radius: var(--main-border-radius)
+
+.swiper
+    width: 100%
+    height: 100%
+    padding-bottom: 33px
+    &-pagination
+        &-bullet
+            border-radius: 4px
+            transition: .5s
+            &-active
+                width: 32px
+
+.map
+    position: relative
+
+.maps
+    width: 100%
+    height: 100%
+.sl
+    // position: relative
+    .popup
+        &-wrapper
+        // position: static
+    .popup-close
+        z-index: 10
+    // .popup-close
+    //     color: var(--color-white)
+    //     border: 2px solid var(--color-white)
+    //     text-shadow: 1px 1px 1.5px var(--color-shadow-form), 0px 0px 1.5px var(--main-text-color), 0px 0px 1px var(--main-text-color)
+    //     box-shadow: 0px 0px 3px 0px var(--color-shadow-dark-black), inset 0px 0px 3px 0px var(--color-shadow-dark-black)
+    //     z-index: 10
+    //     svg
+    //         filter: drop-shadow(1px 1px 1.5px var(--main-text-color))
+    .card
+        img
+            max-width: 100vw
+            max-height: 100vh
+        &-sl
+            position: absolute
+            bottom: 20px
+            right: 20px
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 70px
+            height: 70px
+            color: var(--color-white)
+            cursor: pointer
+            z-index: 999
+            svg
+                width: 25px
+                height: 25px
+                transition: .3s
+                filter: drop-shadow(0px 0px 5px var(--main-text-color))
+            &:hover
+                svg
+                    width: 35px
+                    height: 35px
+.gallery.popup
+    padding-top: 0
+    .swiper
+        height: auto
+        &-slide
+            min-height: initial
+    .popup
+        &-wrapper
+            // height: 95vh
+            min-height: initial
+            background-color: #fff0
+        &-close
+            box-shadow: 0 0 3px var(--main-text-color),inset 0 0 3px var(--main-text-color)
+            svg
+                filter: drop-shadow(0 0 5px var(--main-text-color))
+.card
+    user-select: none
+    // font-weight: 500
+    br
+        display: block
+    p
+        display: inline
+        // display: inline-block
+        // display: inline-flex
+        // box-shadow: -7px 0 0 #000 !important
+        line-height: 1.6
+        // outline: var(--color-shadow-dark-black) solid 4px
+        border: 4px solid #596c9300
+        // border-top: 4px solid #596c9300
+        // border-bottom: 4px solid #596c9300
+        // padding: 5px 10px
+        background-color: var(--color-shadow-dark-black)
+    .caption
+        line-height: 1.46
+        // padding: -10px 2px
+        // margin-left: 6px
+    .subtitle
+        line-height: 1.4
+        line-height: 0
+        // margin-left: -6px
+    .swiper
+        &-slide
+            position: relative
+            width: 100%
+            // max-width: 23.75rem
+    &-sl
+        display: none
+    &-image
+        position: relative
+        width: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            // filter: brightness(80%)
+    header
+        // display: flex
+        // flex-direction: column
+    footer
+        margin-top: auto
+        > div
+            // display: inline-flex
+            // flex-direction: column
+            p
+                // display: inline-flex
+    &-inner
+        display: flex
+        gap: 10px
+    &-swiper
+        width: 100%
+        // height: auto
+        height: 100%
+        padding-bottom: 0
+
+.card
+
+    .fz
+        font-weight: 700
+        p
+            background-color: #fff0
+            border: none
+            text-shadow: 2px 2px 0px var(--main-text-color)
+        .card-image
+            // position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: var(--main-border-radius)
+                background: rgb(202,202,201)
+                background: linear-gradient(180deg, #0000006f 0%, #00000000 16%, #00000000 58%, #0000005f 100%)
+    .card
+        &-image
+            position: absolute
+            width: 100%
+            height: 100%
+            filter: brightness(70%)
+            // background: linear-gradient(180deg, rgba(32, 32, 32, 0.6) 0%, rgba(32, 32, 32, 0) 100%)
+            // background-blend-mode: multiply
+            z-index: -1
+            img
+                z-index: -2
+        &-active
+            position: absolute
+            top: 50%
+            left: 50%
+            transition: .3s
+            transform: translate(-50%, -50%)
+        &-content
+            display: flex
+            flex-wrap: wrap
+            aspect-ratio: 2 / 3
+            padding: 48px 38px 49px 38px
+        &-inner
+            display: flex
+            gap: 10px
+        &-link
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 50px
+            margin-bottom: 9px
+            border-radius: 50%
+            border: 2px solid var(--color-white)
+            background-color: var(--color-white)
+            svg
+                color: var(--main-text-color)
+            &-hover
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 51px
+                height: 51px
+                border-radius: 50%
+                border: 2px solid var(--color-white)
+                transition: .3s
+                svg
+                    padding-top: 2px
+        &-popup
+            display: none
+@media (min-width: 992px)
+    .card
+        .swiper-slide:hover
+            .card-active
+                opacity: 1
+                visibility: visible
+        &-active
+            opacity: 0
+            visibility: hidden
+            &:hover
+                // text-shadow: 1px 1px 1px var(--main-text-color)
+                background-color: #fff3
+                backdrop-filter: blur(2px)
+        &-link
+            &-hover
+                &:hover
+                    color: var(--main-text-color)
+                    background-color: var(--color-white)
+
+@media (max-width: 991.98px)
+    .card
+        &-active
+            background-color: #fff3
+            backdrop-filter: blur(2px)
+@media (min-width: 768px)
+    .swiper
+        &-buttons
+            position: absolute
+            top: 0
+            right: 0
+            display: flex
+            margin-bottom: 2.1875em
+            div
+                width: 1.9375em
+                height: 1.9375em
+                text-align: center
+                line-height: 1.75em
+                font-size: 2em
+                border: 1px solid var(--main-text-color)
+                border-radius: 50%
+                &:first-child
+                    margin-right: 0.5em
+@media (max-width: 767.98px)
+    .swiper
+        &-buttons
+            display: none
+
+.container, .container-lg
+    position: relative
+    .background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            // object-fit: contain
+.container-lg
+    width: 100%
+    // flex-grow: 1
+@media (max-width: 1200px)
+    .container
+        width: 90%
+@media (max-width: 850px)
+    .container
+        width: 95%
+
+.text-white, .text-white a
+    color: var(--color-white)
+.shadow
+    &-blue
+        // text-shadow: 1px 1px 2px var(--color-blue), -1px -1px 2px var(--color-blue), 1px -1px 2px var(--color-blue), -1px 1px 2px var(--color-blue)
+        // text-shadow: 1px 1px 1.5px var(--color-shadow-form), -1px -1px 1.5px var(--color-shadow-form), 1px -1px 1.5px var(--color-shadow-form), -1px 1px 1.5px var(--color-shadow-form)
+        text-shadow: 1px 1px 1.5px var(--color-shadow-form), 0px 0px 1px var(--color-second-shadow-form)
+        input, textarea
+            text-shadow: 1px 1px 1.5px var(--color-shadow-form), 0px 0px 1.5px var(--color-shadow-form), 0px 0px 1px var(--color-second-shadow-form)
+            box-shadow: 0px 0px 1px var(--color-shadow-form), inset 0px 0px 1px var(--color-shadow-form)
+        label
+            text-shadow: 1px 1px 1.5px var(--color-shadow-form), -1px -1px 1.5px var(--color-shadow-form), 1px -1px 1.5px var(--color-shadow-form), -1px 1px 1.5px var(--color-shadow-form)
+    &-black
+        text-shadow: 1px 1px 4px var(--color-shadow-black), 0px 0px 3px var(--main-text-color), 0px 0px 4px var(--main-text-color)
+.form-popup.form
+    display: none
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background-color: #0000006e
+    z-index: 101
+    overflow: scroll
+.form-popup .form
+    &-wrap
+        position: relative
+        display: flex
+        width: 400px
+        // max-width: 90%
+        // min-height: 500px
+        border-radius: var(--main-border-radius)
+        // background-color: var(--color-white)
+        background-color: #0007
+        backdrop-filter: blur(10px)
+    &-inner
+        // display: flex
+        width: 100%
+        flex-basis: 100%
+        // height: 100%
+        // gap: var(--main-gap)
+    &-wrapper
+        text-align: center
+        color: var(--color-white)
+    &-close
+        position: absolute
+        top: 20px
+        right: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 44px
+        height: 44px
+        border: 2px solid #fff
+        border-radius: 50%
+        cursor: pointer
+        svg
+            color: var(--color-white)
+    &-form
+        flex-wrap: wrap
+    &-inner
+        margin-bottom: 15px
+    &-btn
+        display: flex
+        justify-content: center
+        width: 100%
+        color: var(--color-white)
+        background-color: #0000
+
+.popup-swiper
+    padding-bottom: 0
+    // width: 100%
+    // height: 100%
+    // max-width: 100%
+    // max-height: 100%
+    // .swiper-slide, .swiper-wrapper
+    //     width: 100%
+    //     height: 100%
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+.active.form-popup
+    display: flex
+.popup
+    display: none
+    justify-content: center
+    align-items: center
+    width: 100%
+    min-height: 95vh
+    height: 100%
+    // height: auto
+    position: fixed
+    top: 0
+    left: 0
+    background-color: #0000006e
+    z-index: 100
+    overflow: scroll
+    br
+        display: none
+    &-wrapper
+        position: relative
+        display: flex
+        max-width: 90%
+        height: auto
+        // max-height: 100vh
+        min-height: 500px
+        // min-height: 500px
+        // height: 80%
+        // height: auto
+        // height: 100%
+        // overflow: scroll
+        border-radius: var(--main-border-radius)
+        background-color: var(--color-white)
+    &-inner
+        display: flex
+        width: 100%
+        // height: 100%
+        // gap: var(--main-gap)
+    &-close
+        position: absolute
+        top: 20px
+        right: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 51px
+        height: 51px
+        border: 2px solid var(--main-text-color)
+        box-shadow: 0px 0px 3px var(--color-white), inset 0px 0px 3px var(--color-white)
+        border-radius: 50%
+        cursor: pointer
+        z-index: 100
+        svg
+            filter: drop-shadow(0px 0px 5px var(--color-white))
+    &-hide
+        display: none
+    .swiper
+        &-wrapper, &-slide
+            max-height: 100%
+        &-slide
+            min-height: 300px
+            img
+                max-height: 100vh
+                height: 100%
+
+    .card
+        &-image
+            max-height: 100vh
+            height: auto
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-bottom-right-radius: 0
+        &-inner
+            flex-wrap: wrap
+            aside
+                width: 100%
+                margin-top: 40px
+                margin-bottom: 40px
+                a
+                    display: inline-flex
+                    justify-content: center
+                    align-items: center
+                    width: 46px
+                    height: 46px
+                    margin-top: 10px
+                    margin-right: 5px
+                    border: 1px solid #000
+                    border-radius: 50%
+        &-active
+            display: none
+        &-content
+            // minw: 550px
+            // padding: 40px var(--main-gap)
+            header
+                .subtitle
+                    display: none
+            footer
+                max-width: 600px
+                margin-bottom: 1em
+                p:not([class])
+                    font-size: 0.875em
+                    span:last-child
+                        font-weight: 600
+                .subtitle
+                    margin-bottom: 2em
+                div
+                    width: 100%
+                div:not([class])
+                    display: flex
+                    flex-direction: column
+                    flex-wrap: wrap
+                    .caption
+                        order: -1
+        &-popup
+    &-connect
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-end
+    &-desc
+        margin-bottom: 1em
+    &-action
+        margin-top: 1em
+    ul
+        font-family: 'Michroma', sans-serif
+        max-width: 22em
+        // margin: 2.5em 0
+        li
+            display: flex
+            justify-content: space-between
+            a
+                margin-left: 0.875em
+        li:not(:last-child)
+            margin-bottom: 1.0625em
+
+@media (min-width: 992px)
+    .popup
+        &-wrapper
+            max-width: 100%
+            width: 1144px
+        &-close
+            transition: .1s
+            &:hover
+                border: 3px solid inherit
+    .expert .popup
+        &-wrapper
+            width: 951px
+
+@media (min-width: 768px)
+    .popup
+        .card
+            &-image
+                flex-shrink: 0
+                width: 30%
+                img
+                    border-top-right-radius: 0
+            &-content
+                padding: 40px var(--main-gap)
+                footer
+                    // p:not([class])
+                    //     display: flex
+                    //     justify-content: space-between
+
+@media (max-width: 767.98px)
+    .popup
+        // height: 100%
+        padding-top: 320px
+        // padding-top: 0
+        margin-top: 0
+        &-wrapper
+            max-width: 560px
+            width: 100%
+        &-close
+            color: var(--color-white)
+            border: 2px solid var(--color-white)
+            box-shadow: 0 0 3px var(--main-text-color),inset 0 0 3px var(--main-text-color)
+            svg
+                filter: drop-shadow(0px 0px 5px var(--main-text-color))
+        &-inner
+            flex-wrap: wrap
+        &-connect
+            justify-content: center
+        .card
+            &-image
+                max-height: 400px
+                img
+                    border-bottom-left-radius: 0
+            &-content
+                padding: 50px 24px
+@media (max-width: 767.98px)
+    .popup
+
+.active.popup
+    display: flex
+
+.success
+    display: none
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background-color: #0000006e
+    z-index: 1002
+    overflow: scroll
+    &-wrapper
+        display: flex
+        align-items: center
+        gap: 30px
+        pointer-events: none
+    &-content
+        position: relative
+        display: flex
+        align-items: center
+        // flex-wrap: wrap
+        gap: 36px
+        width: 90%
+        max-width: 572px
+        min-height: 135px
+        padding: 28px 44px
+        border-radius: var(--main-border-radius)
+        background-color: var(--color-white)
+    &-true
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 57px
+        height: 57px
+        border-radius: 50%
+        color: var(--color-white)
+        background-color: var(--color-blue)
+    &-inner
+        // min-width: 300px
+    &-close
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 51px
+        height: 51px
+        color: var(--color-white)
+        border: 2px solid var(--color-white)
+        border-radius: 50%
+        cursor: pointer
+        pointer-events: none
+
+@media (max-width: 767.98px)
+    .success
+        &-wrapper
+            flex-direction: column
+        &-content
+            flex-direction: column
+            text-align: center
+
+.active.success
+    display: flex
+
+.dn
+    display: none !important
+
+.dropdown
+    position: relative
+    cursor: pointer
+    text-transform: uppercase
+    .select
+        display: flex
+        align-items: center
+        span
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 50px
+            border: 2px solid var(--main-text-color)
+            border-radius: 50%
+        &::after
+            content: ''
+            width: 0
+            height: 0
+            margin-left: 5px
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid var(--main-text-color)
+            transition: 0.3s
+    &-options
+        position: absolute
+        top: 110%
+        left: 0
+        display: none
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 30px
+            border: 1px solid #ccc
+            border-radius: 2px
+            background-color: var(--color-white)
+            transition: 0.3s
+            &:hover
+                color: var(--color-white)
+                background-color: var(--main-text-color)
+                a
+                    color: inherit
+.choices
+    .select
+        &::after
+            transform: scaleY(-1)
+    .dropdown
+        &-options
+            display: block
+@media (max-width: 767.98px)
+    .dt
+        display: none
+@media (min-width: 768px)
+    .mb
+        display: none
+
+// #chart-container
+//     position: relative
+
+// #tooltip
+//     position: absolute
+//     display: none
+//     background-color: rgba(0, 0, 0, 0.8)
+//     color: #fff
+//     padding: 5px 10px
+//     border-radius: 5px
+
+.custom-tooltip
+    background-color: rgba(0, 0, 0, 0.7)
+    border-radius: 5px
+    color: #fff
+    padding: 5px 10px
+    pointer-events: none
+    position: absolute
+    text-align: center
+    transform: translate(-50%, 10px)
+    transition: all 0.3s ease
+    white-space: nowrap
+
+
+
+
+
+
+
+
+
+
+
+
+@import config
+@import '**/**/*'

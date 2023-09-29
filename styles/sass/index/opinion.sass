@@ -1,0 +1,68 @@
+.opinion
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    // grid-template-rows: repeat(2, auto)
+    grid-auto-rows: max-content
+    // display: flex
+    gap: var(--main-gap)
+    &-img
+        grid-area: 1 / 1 / 3 / 2
+        // flex: 1 0 30%
+        // max-width: 400px
+        width: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: right
+    &-desc
+        grid-area: 1 / 2 / 2 / 4
+    &-chart
+        grid-area: 2 / 2 / 3 / 4
+
+@media (min-width: 992px)
+    .opinion
+        &-img
+            height: 100%
+            img
+                height: 100%
+                object-fit: cover
+// @media (min-width: 768px)
+@media (max-width: 991.98px)
+    .opinion
+        display: grid
+        justify-content: center
+        flex-wrap: wrap
+        // grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: 2fr, 1fr, 1fr
+        // grid-template-rows: repeat(2, 1fr)
+        &-img
+            grid-area: 1 / 1 / 2 / 2
+        &-desc
+            grid-area: 1 / 2 / 2 / 4
+        &-chart
+            grid-area: 2 / 1 / 3 / 4
+@media (max-width: 767.98px)
+    .opinion
+        gap: 40px
+
+@media (max-width: 575.98px)
+    .opinion
+        font-size: 0.8em
+        line-height: 1.4
+        gap: 20px
+        // margin-bottom: -140px
+@media (max-width: 400px)
+    .title
+        line-height: 1.2
+        margin-bottom: 0.6em
+    .opinion
+        grid-template-columns: repeat(5, 1fr)
+        gap: 10px
+        line-height: 1.2
+        &-img
+            grid-area: 1 / 1 / 2 / 3
+        &-desc
+            grid-area: 1 / 3 / 2 / 6
+        &-chart
+            grid-area: 2 / 1 / 3 / 6

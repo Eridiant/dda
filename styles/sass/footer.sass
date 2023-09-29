@@ -1,0 +1,115 @@
+.footer
+    background-color: #F3F5F9
+    .container
+        display: flex
+        flex-wrap: wrap
+        gap: var(--main-gap)
+        padding-top: 2.625em
+        padding-bottom: 3em
+    &-column
+        &:first-child
+            .icon
+                margin-bottom: 20px
+    &-link
+        flex-grow: 1
+        .border
+            margin-top: 20px
+    &-inner
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        flex-wrap: wrap
+        gap: 1.25em
+        &:not(:last-child)
+            margin-bottom: 1.25em
+        &-block
+            display: block
+            img
+                max-width: 100px
+
+
+@media (max-width: 575.98px)
+    .footer
+        .container
+            text-align: center
+            justify-content: center
+            align-items: flex-end
+        &-inner
+            justify-content: center
+        .header-localization-links ul
+            display: flex
+            flex-direction: column
+        &-column
+            .icon
+                margin-bottom: 40px
+            a
+                margin-left: auto
+                margin-right: auto
+            ul
+                display: flex
+                justify-content: center
+                gap: 0.625em
+
+.cont
+    &-wrapper
+        position: fixed
+        bottom: 40px
+        right: 40px
+        z-index: 99
+    &-inner
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 70px
+        height: 70px
+        cursor: pointer
+        border-radius: 50%
+        transition: .4s
+        animation-duration: 2s
+        animation-name: slidein
+        animation-iteration-count: infinite
+        background-color: #21237c69
+        background-color: var(--main-bg-color)
+        &:not(:last-child)
+            margin-bottom: 10px
+        svg, span
+            color: var(--white-text-color)
+        &:hover
+            animation-play-state: paused
+        a, div
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 52px
+            height: 52px
+            border-radius: 50%
+            transition: inherit
+            background-color: #fff
+        svg
+            transition: inherit
+            margin-top: 3px
+            margin-left: 1px
+            color: var(--main-bg-color)
+
+@keyframes slidein
+    0%
+        background-color: #21237c69
+
+    50%
+        background-color: #21227c0c
+
+    100%
+        background-color: #21237c69
+
+@media (max-width: 575.98px)
+    .cont
+        &-wrapper
+            bottom: 20px
+            right: 20px
+        &-inner
+            width: 50px
+            height: 50px
+            a, div
+                width: 38px
+                height: 38px
+

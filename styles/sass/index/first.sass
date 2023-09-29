@@ -1,0 +1,162 @@
+.first
+    position: relative
+    height: 100vh
+    min-height: 600px
+    color: var(--color-white)
+    padding-top: var(--padding-top)
+    .container-lg, .container
+        height: 100%
+    .title
+        margin-bottom: 0.4em
+    a
+        color: inherit
+        transition: 0.3s
+        svg
+            margin-right: 0
+    svg
+        filter: drop-shadow(1px 1px 1.5px var(--main-text-color))
+    &-bg
+    &-button
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        div
+            cursor: pointer
+            z-index: 1
+        &-prev svg
+            // transform: scaleX(-1)
+            // transform: scaleY(-1)
+            transform: scaleX(-1)
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        height: 100%
+        padding-top: 2em
+        padding-bottom: 4.25em
+    &-content
+        .title
+            line-height: 1.435
+        p
+            display: inline
+            background-color: var(--color-shadow-dark-black)
+            // outline: var(--color-shadow-dark-black) solid 4px
+            border: 4px solid #596c9300
+        &.dark
+            text-shadow: 0px 0px 3px var(--color-shadow-dark-black), 1px 1px 5px var(--color-shadow-dark-black)
+            .first-consultation
+                box-shadow: 0px 0px 3px 0px var(--color-shadow-dark-black), inset 0px 0px 3px 0px var(--color-shadow-dark-black)
+    &-swiper
+        padding-bottom: 0
+    &-inner
+        max-width: 600px
+        margin-bottom: 1em
+        // display: flex
+        // .lead
+        //     flex-grow: 1
+    &-consultation
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7)
+        &:not(:hover)
+            background-color: #ffffffc1
+            backdrop-filter: blur(1px)
+            color: var(--main-text-color)
+            text-shadow: none
+            box-shadow: none
+            svg
+                filter: drop-shadow(0px 0px 0px var(--main-text-color))
+    &-switch
+        display: flex
+        margin-top: auto
+        margin-left: auto
+        gap: 1.25em
+    &-item
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 0.93em
+        min-width: 17.875em
+        min-height: 7em
+        font-size: 0.875em
+        transition: 0.3s
+        border: 1px solid var(--color-white)
+        border-radius:0.375em
+        background-color: #2e2e2e80
+        &.active
+            background-color: #2e2e2edd
+    &-digit
+        font-size: 2.125em
+    &-desc
+        max-width: 10em
+
+@media (min-width: 992px)
+    .small-text
+        .title
+            font-size: 2em
+            line-height: 1.46
+    .first
+        a
+            &:hover
+                background-color: #fff3
+                backdrop-filter: blur(2px)
+        &-item
+            cursor: pointer
+            &:hover
+                background-color: #2e2e2edd
+
+@media (max-width: 991.98px)
+    .first
+        &-content
+            .title
+                line-height: 1.54
+        &-switch
+            gap: 1em
+        &-item
+            gap: 0.625em
+            min-width: 14em
+            min-height: 6em
+        &-digit
+            font-size: 1.8em
+        &-desc
+            max-width: 8em
+
+@media (max-width: 767.98px)
+    .first
+        .title br
+            display: none
+        &-content
+            > a
+                color: var(--main-text-color)
+                background-color: var(--color-white)
+            // a
+            //     background-color: #fff0
+            // svg
+            //     color: var(--color-white)
+        &-inner
+            flex-wrap: wrap
+            margin-bottom: 2em
+        &-consultation
+            text-shadow: none
+            svg
+                filter: none
+        &-switch
+            display: none
+
+@media (min-width: 576px)
+    .small
+        .first-inner
+            max-width: 450px
+    .large
+        .title
+            max-width: 900px
+    .first
+        &-content:not(.left)
+            display: flex
+            flex-direction: column
+            // justify-content: end
+            align-items: end
+            text-align: right
+            width: 100%

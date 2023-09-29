@@ -1,0 +1,25 @@
+.contacts
+    display: flex
+    flex-wrap: wrap
+    gap: var(--main-gap)
+    padding-top: var(--padding-top)
+    ul
+        font-family: 'Michroma', sans-serif
+        width: 22em
+        margin: 2.5em 0
+        li
+            display: flex
+            justify-content: space-between
+            a
+                margin-left: 0.875em
+        li:not(:last-child)
+            margin-bottom: 1.0625em
+    svg
+        color: black
+    .border
+        font-size: 0.875rem
+        margin-bottom: 0.714em
+    &-inf
+        flex: 0 0 35%
+    &-map
+        flex: 1

@@ -1,0 +1,21 @@
+.about
+    &-desc
+        display: flex
+        flex-wrap: wrap
+        gap: var(--small-gap)
+        &-column
+            flex-basis: 40%
+            flex-grow: 1
+
+@media (min-width: 576px)
+    .about
+        &-desc
+            &-column
+                min-width: 400px
+
+@media (max-width: 575.98px)
+    .about
+        &-desc
+            &-column
+                font-size: 0.8em
+                min-width: 300px

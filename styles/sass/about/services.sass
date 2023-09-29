@@ -1,0 +1,124 @@
+.services
+    &-items
+        display: flex
+        flex-wrap: wrap
+        gap: 2.875em
+    &-item
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        flex: 1 1 30%
+        min-width: 18.75em
+        height: auto
+        padding: 1.25em
+        aspect-ratio: 42 / 23
+        a
+            cursor: auto
+            color: var(--color-white)
+            text-shadow: 1px 1px 4px var(--color-shadow-black), -1px -1px 4px var(--color-shadow-black), 1px -1px 4px var(--color-shadow-black), -1px 1px 4px var(--color-shadow-black)
+        .over-img
+            display: none
+        &-inner
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            width: 100%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                filter: brightness(60%)
+
+    &-item_del
+        position: relative
+        flex: 1 1 30%
+        min-width: 18.75em
+        min-height: 220px
+        height: auto
+        aspect-ratio: 42 / 23
+        a
+            transition: .2s
+        &-inner
+            width: 100%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            .over-img
+                display: none
+
+@media (min-width: 992px)
+    .services_del
+        &-item
+            &-inner
+                position: absolute
+                // top: 0
+                // left: 0
+                top: 2.9375rem
+                // left: 1.75rem
+                left: 0rem
+                overflow: hidden
+                // width: 95%
+                height: auto
+                img
+                    width: 100%
+                    object-fit: cover
+                    transition: .5s
+                    opacity: 0
+                .over-img
+                    display: block
+                    position: absolute
+                    top: -2.9375rem
+                    // left: -1.75rem
+                    color: var(--color-white)
+                    // text-shadow: 1px 1px 3px var(--color-shadow-black)
+                    // text-shadow: 1px 1px 4px var(--color-shadow-black), -1px -1px 4px var(--color-shadow-black), 1px -1px 4px var(--color-shadow-black), -1px 1px 4px var(--color-shadow-black)
+                    opacity: 0
+                    z-index: 1
+            &:hover
+                a
+                    color: var(--color-blue)
+                img
+                    opacity: 1
+                .over-img
+                    // mix-blend-mode: color-dodge
+                    color: var(--color-white)
+                    // mix-blend-mode: overlay
+                    opacity: 1
+
+@media (max-width: 991.98px)
+    .services
+        &-item
+            display: flex
+            flex-wrap: wrap
+            // margin-bottom: 40px
+            // align-items: flex-end
+            a
+                max-width: 16.67em
+                padding: 1.42em 1.29em
+                // color: var(--color-white)
+            &-inner
+                // display: none
+                z-index: -1
+                img
+                    // filter: brightness(60%)
+
+@media (min-width: 768px)
+    .services
+        &-item
+            min-height: 220px
+@media (max-width: 767.98px)
+    .services
+        &-items
+            gap: 2.4em
+        &-item
+            padding: 0
+            aspect-ratio: 2 / 1
+            a
+                max-width: 16.67em
+                padding: 0.8em 0.6em

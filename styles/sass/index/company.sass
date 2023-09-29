@@ -1,0 +1,52 @@
+.company
+    &-desc
+        margin-bottom: 2em
+    &-btn
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        min-height: 42px
+        color: var(--color-blue)
+        border: 1px solid var(--color-blue)
+        border-radius: 50px
+        padding: 0px 18px
+        margin-top: 40px
+        // span, svg
+        //     color: var(--color-blue)
+    &-img
+        width: 100%
+        img
+            width: 100%
+            object-fit: cover
+.read-more-state
+    display: none
+@media (max-width: 575.98px)
+    .company
+        font-size: 0.8em
+    .read-more
+        &-target
+            opacity: 0
+            max-height: 0
+            font-size: 0
+            transition: .25s ease
+        &-state
+            & ~ .read-more-trigger:before
+                content: 'Читать дальше'
+            &:checked
+                ~ .read-more-wrap .read-more-target
+                    opacity: 1
+                    font-size: inherit
+                    max-height: 999em
+                ~ .read-more-trigger:before
+                    content: 'Скрыть'
+        &-trigger
+            cursor: pointer
+            display: inline-block
+            padding: 0 .5em
+            color: #666
+            font-size: .9em
+            line-height: 2
+            border: 1px solid #ddd
+            border-radius: .25em
+
+
